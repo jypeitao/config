@@ -2,8 +2,12 @@
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   inactive_color_offset = 1.0
   title_inactive_bg_color = "#aeadae"
+  title_receive_fg_color = "#eeeeec"
   title_transmit_bg_color = "#aeadae"
+  title_transmit_fg_color = "#eeeeec"
 [keybindings]
+  copy = <Primary><Shift>c
+  paste = <Primary><Shift>v
 [layouts]
   [[default]]
     [[[child1]]]
@@ -17,9 +21,10 @@
 [profiles]
   [[default]]
     autoclean_groups = False
-    background_darkness = 0.93
-    background_image = None
-    cursor_color = "#ffffff"
+    background_darkness = 0.9
+    copy_on_selection = True
+    cursor_color = "#c17d11"
+    custom_command = zsh
     font = Ubuntu Mono 18
     foreground_color = "#ffffff"
     icon_bell = False
@@ -28,9 +33,10 @@
     use_system_font = False
   [[New Profile]]
     background_color = "#300a24"
-    background_darkness = 0.94
-    background_image = None
+    background_darkness = 0.9
     background_type = transparent
+    copy_on_selection = True
+    cursor_color = "#ffffff"
     font = Ubuntu Mono 15
     foreground_color = "#ffffff"
     show_titlebar = False
