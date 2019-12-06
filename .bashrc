@@ -122,3 +122,10 @@ export PATH=/home/peter/flutter/flutter/bin:/home/peter/bin/jiri/.jiri_root/bin:
 alias gitlog="git log --graph --pretty=format:'%Cgreen%h%Creset(%Cblue%cd%Creset)-%Cblue%an%Creset %Cgreen%s%Creset' --date=short"
 alias jdgui="java -jar /opt/jd-gui/jd-gui.jar"
 export OPENSSL_DIR=/usr/lib/ssl1.0/
+export GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+#export GIT_PS1_SHOWUPSTREAM="auto"
+PROMPT_COMMAND='__git_ps1 "${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" "\\\$ "'
+
