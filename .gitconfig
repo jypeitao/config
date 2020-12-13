@@ -1,17 +1,16 @@
 [color]
     ui = auto
 [user]
-    name = tao.pei
-    email = tao.pei@ck-telecom.com
+    name=peter.pei
+    email=gpeitao@gmail.com
 [commit]
-    template = /home/peter/.gitmessage
+    template = ~/.gitmessage
 [core]
     editor = vim 
     safecrlf = true
 [review "http://10.120.10.101"]
     autoupload = true
     uploadtopic = true
-[http]
 [http]
     cookiefile = %USERPROFILE%\\.gitcookies
 [push]
