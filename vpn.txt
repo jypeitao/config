@@ -1,0 +1,1 @@
+echo "password" | sudo openconnect --protocol=anyconnect server --user=username --passwd-on-stdin

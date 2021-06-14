@@ -1,6 +1,6 @@
 #!/bin/bash
 
-software_list="git openssh-server zsh fasd net-tools tmux fzf axel"
+software_list="git openssh-server openconnect zsh fasd net-tools tmux fzf axel"
  
 echo $software_list
 
