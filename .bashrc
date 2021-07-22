@@ -1,6 +1,13 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview '
+                 (bat --style=numbers --color=always {} ||
+                  highlight -O ansi -l {} ||
+                  coderay {} ||
+                  rougify {} ||
+                  cat {}) 2> /dev/null | head -500'"
+
 
 # If not running interactively, don't do anything
 case $- in
@@ -16,8 +23,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=99999
+HISTFILESIZ=99999
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -116,16 +123,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/home/peter/flutter/flutter/bin:/home/peter/bin/jiri/.jiri_root/bin:/home/peter/Android/Sdk/platform-tools:$HOME/bin:$HOME/bin/decompile/apktool:$HOME/bin/decompile/dex-tools-2.1-SNAPSHOT:$PATH
-# export PATH=$HOME/bin:/home/peter/bin/java-se-7u75-ri/bin:$PATH
-# export LC_ALL=C
+# eval "$(fasd --init auto)"
+# alias j=zz
+
 alias gitlog="git log --graph --pretty=format:'%Cgreen%h%Creset(%Cblue%cd%Creset)-%Cblue%an%Creset %Cgreen%s%Creset' --date=short"
-alias jdgui="java -jar /opt/jd-gui/jd-gui.jar"
-export OPENSSL_DIR=/usr/lib/ssl1.0/
+
 export GIT_PS1_SHOWCOLORHINTS=true
 export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWSTASHSTATE=true
+# export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
-#export GIT_PS1_SHOWUPSTREAM="auto"
+#export  GIT_PS1_SHOWUPSTREAM="auto"
+
 PROMPT_COMMAND='__git_ps1 "${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" "\\\$ "'
+
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+eval "$(lua ~/os/z.lua/z.lua --init bash enhanced once echo fzf)"
+source ~/os/czmod/czmod.bash
+alias j='z -i'
+alias jf='z -I'
+alias jb='z -b'
 
