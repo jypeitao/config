@@ -31,8 +31,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'bfrg/vim-cpp-modern'
 Plug 'flazz/vim-colorschemes'
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
-
-colorscheme codedark
+let g:rustfmt_autosave = 1
