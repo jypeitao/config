@@ -13,6 +13,8 @@ set ai!
 set cindent
 set expandtab
 set nu
+set cursorline
+set noswapfile
 syntax on
 highlight Search ctermfg=green guifg=green
 filetype indent plugin on
@@ -34,7 +36,10 @@ Plug 'flazz/vim-colorschemes'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-unimpaired'
+Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
 let g:rustfmt_autosave = 1
+colorscheme codedark
