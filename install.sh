@@ -48,6 +48,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # highlight for zfz config
 sudo apt install highlight
 
+git clone --depth 1 https://github.com/skywind3000/z.lua.git ~/os/z.lua
+git clone --depth 1 https://github.com/skywind3000/czmod.git ~/os/czmod
+
 # TODO
 # .zshrc 
 
