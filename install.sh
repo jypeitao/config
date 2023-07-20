@@ -1,6 +1,6 @@
 #!/bin/bash
 
-software_list="git openssh-server openconnect zsh fasd net-tools tmux fzf axel"
+software_list="git openssh-server openconnect zsh fasd net-tools tmux fzf axel terminator"
  
 echo $software_list
 
@@ -23,13 +23,13 @@ cp .gitconfig ~/
 # zsh
 sudo apt install zsh
 # ohmyzsh
-sh -c "$(curl -fsSL https://gitee.com/peits/ohmyzsh/raw/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://gitee.com/peits/ohmyzsh/raw/master/tools/install.sh)"
 # zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+#git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # zsh-completions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+#git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 # powerline for zsh agnoster themet 
 sudo apt install fonts-powerline
 
